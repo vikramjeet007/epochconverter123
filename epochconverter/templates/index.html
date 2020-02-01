@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Epoch Converter</title>
+</head>
+<body>
+<H3> Convert Nano second epoch time to actual time</H3>
+<form method="POST" action="">
+{% csrf_token %}
+<table>
+{{form.as_p}} {{val.validation}}
+</table>
+<input type="submit" value="Convert">
+    <br><br><br>
+    Day : {{data.day}} &nbsp;&nbsp;&nbsp;
+    Date : {{data.date}}&nbsp;&nbsp;&nbsp;
+    Year : {{data.year}}&nbsp;&nbsp;&nbsp;
+    Hour : {{data.hour}}&nbsp;&nbsp;&nbsp;
+    Minute : {{data.minute}}&nbsp;&nbsp;&nbsp;
+    Sec : {{data.seconds}}&nbsp;&nbsp;&nbsp;
+    MiliSec : {{data.mili}}&nbsp;&nbsp;&nbsp;
+    MicroSec : {{data.micro}}&nbsp;&nbsp;&nbsp;
+    NanoSec : {{data.nanosec}}
+</form>
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>@Nano Second Converter</footer>
+</html>
